@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Gegenereerd op: 17 jun 2020 om 09:21
--- Serverversie: 8.0.18
--- PHP-versie: 7.3.11
+-- Host: 127.0.0.1
+-- Gegenereerd op: 19 jun 2020 om 13:48
+-- Serverversie: 10.4.11-MariaDB
+-- PHP-versie: 7.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,9 +30,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `locations` (
   `id` int(11) NOT NULL,
-  `locationid` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `location_id` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `city_name` varchar(255) NOT NULL,
+  `zipcode` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -42,12 +46,12 @@ CREATE TABLE `locations` (
 
 CREATE TABLE `reservations` (
   `id` int(11) NOT NULL,
-  `userid` int(11) NOT NULL,
-  `locationid` int(11) NOT NULL,
-  `begintime` time NOT NULL,
-  `endtime` time NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `location_id` int(11) NOT NULL,
+  `begin_time` time NOT NULL,
+  `end_time` time NOT NULL,
   `price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -57,14 +61,14 @@ CREATE TABLE `reservations` (
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `username` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `adres` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `telefoonnummer` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `userid` int(11) NOT NULL,
-  `admin` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `adres` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `admin` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexen voor geëxporteerde tabellen
