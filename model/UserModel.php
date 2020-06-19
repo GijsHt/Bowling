@@ -1,13 +1,14 @@
 <?php 
  
- function registerUser($username, $password, $email, $telefoonnummer, $adres){
+ function registerUser($username, $password, $email, $telefoonnummer, $adres, $admin){
     $db = openDatabaseConnection();
-    $stm = $db->prepare("INSERT INTO users (username, email, password, telefoonnummer, adres) VALUES (:username, :email, :password, :telefoonnummer, :adres)"); 
+    $stm = $db->prepare("INSERT INTO users (username, email, password, telefoonnummer, adres, admin) VALUES (:username, :email, :password, :telefoonnummer, :adres, :admmin)"); 
     $stm->bindParam(':username', $username);
     $stm->bindParam(':email', $email);
     $stm->bindParam(':password', $password);
     $stm->bindParam(':telefoonnummer', $telefoonnummer);
     $stm->bindParam(':adres', $adres);
+    $stm->bindParam(':admin', $admin);
     if ($stm->execute()) {
         echo '<script>alert("Geregistreerd met succes!")</script>';
     } else {
