@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 19 jun 2020 om 13:48
+-- Gegenereerd op: 19 jun 2020 om 14:11
 -- Serverversie: 10.4.11-MariaDB
 -- PHP-versie: 7.2.27
 
@@ -29,8 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `locations` (
-  `id` int(11) NOT NULL,
-  `location_id` varchar(255) NOT NULL,
+  `location_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `city_name` varchar(255) NOT NULL,
   `zipcode` varchar(255) NOT NULL,
@@ -45,7 +44,7 @@ CREATE TABLE `locations` (
 --
 
 CREATE TABLE `reservations` (
-  `id` int(11) NOT NULL,
+  `reservation_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `location_id` int(11) NOT NULL,
   `begin_time` time NOT NULL,
@@ -60,13 +59,12 @@ CREATE TABLE `reservations` (
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `adres` varchar(255) NOT NULL,
   `phone_number` varchar(255) NOT NULL,
-  `user_id` int(11) NOT NULL,
   `admin` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -78,19 +76,19 @@ CREATE TABLE `users` (
 -- Indexen voor tabel `locations`
 --
 ALTER TABLE `locations`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`location_id`);
 
 --
 -- Indexen voor tabel `reservations`
 --
 ALTER TABLE `reservations`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`reservation_id`);
 
 --
 -- Indexen voor tabel `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
@@ -100,19 +98,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT voor een tabel `locations`
 --
 ALTER TABLE `locations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT voor een tabel `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
