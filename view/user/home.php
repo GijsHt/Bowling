@@ -17,27 +17,10 @@
 </div>
 
 <h3 class="text-dark float-right mr-5 mt-2">Hello <?= " ". $loggedInUser?></h3>
-<div class="mb-5 mt-2">
-
-    <div class="d-lg-flex flex-lg-row flex-sm-column justify-content-between">
-    
-        <h1>BGR Bowling</h1>
-
-        <h1>Bowlen met BGR</h1>
-    </div>
+<img src="<?= URL ?>img/header.jpg" id="header" height="400px" width="100%">
+        <h1 id="title">BGR Bowling</h1>
 
 
-<div class="container">
-    <div class="row d-inline">
-  
-        <div class="img-thumbnail col-4 m-2 ">
-
-
- 
-             
-        </div>
-    </div>
-</div>
 
 
 

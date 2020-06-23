@@ -3,3 +3,9 @@
     left: 1300px;
     bottom: 70px;
 }
+#title{
+    position: absolute;
+    bottom: 280px;
+    left: 600px;
+    color: white;
+}
