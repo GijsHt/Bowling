@@ -1,3 +1,6 @@
+<a href="<?= URL ?>Location/index" class="btn btn-primary float-right mr-5 mt-1">Go back -></a>
+<h1>THIS IS LOCATION DETAILS</h1>
+
 <?php
 $result = getALlLocations();
 
@@ -11,7 +14,7 @@ foreach($result as $location){ ?>
     <img src="<?=$location['image'] ?>"></img>
 
 
-    <a href="locationDetails.php?id=<?= $location['location_id']?>" class="btn btn-primary">Meer details</a>
+
 
 <?php } ?>
 
