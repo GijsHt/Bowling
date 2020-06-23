@@ -1,3 +1,4 @@
+<?php $loggedInUser = $_SESSION['username'] ?>
 <div class="bg-dark">
     <div class="navbar">
         <ul class="nav navbar-nav text-light">
@@ -5,26 +6,17 @@
             <li><a href="<?= URL ?>Location/index" class="text-light">Locations</a></li>
             <li><a href="<?= URL ?>Reservations/index" class="text-light">Reservations</a></li>
             <li><a href="<?= URL ?>User/inlog" class="text-light">log out</a></li>
+
         </ul>
     </div>
 </div>
 
-<a class="nav-link text-white" href="<?php echo URL ?>user/inlog">Log out <-</a>
-
-                <a class="nav-link text-white" href="<?php echo URL ?>user/users">Users</a>
-
-            </li>
-        </ul>
-    </div>
-</nav>
-
-
+<h3 class="text-dark float-right mr-5 mt-2">Hello <?= " ". $loggedInUser?></h3>
 <div class="mb-5 mt-2">
 
     <div class="d-lg-flex flex-lg-row flex-sm-column justify-content-between">
     
         <h1>Bowlen met BGR</h1>
-        <a class="btn-lg btn-primary text-white align-self-center" href="createform">Nieuw paard +</a>
     </div>
 
 

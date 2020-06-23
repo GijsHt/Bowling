@@ -1,3 +1,4 @@
+<?php $loggedInUser = $_SESSION['username'] ?>
 <div class="bg-dark">
     <div class="navbar">
         <ul class="nav navbar-nav text-light">
@@ -8,8 +9,15 @@
         </ul>
     </div>
 </div>
-
+    <h3 class="text-dark float-right mr-5 mt-2">Hello <?= " ". $loggedInUser?></h3>
 <h1>reservations index</h1>
 
 
-<small>Make a Reservation <a href="<?= URL ?>Reservations/viewCreateForm">here!</a></small>
+
+<large>Make a Reservation <a href="<?= URL ?>Reservations/viewCreateForm">here!</a></large>
+
+
+<?php
+
+
+?>

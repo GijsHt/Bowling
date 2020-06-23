@@ -1,6 +1,7 @@
+<?php $ids= getUsers();
+foreach ($ids as $id)?>
 
-
-    <form class='form jumbotron' method="POST" action="<?= URL ?>user/inlog">
+    <form class='form jumbotron' method="POST" action="<?= URL ?>user/inlog?id=<?=$id["user_id"]?>">
             <div class="form-group col">
                 <label>Gebruikersnaam</label>
                 <input class="form-control" type="text" name="username" placeholder="Gebruikersnaam" />
