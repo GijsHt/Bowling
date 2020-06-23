@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 <?php $loggedInUser = $_SESSION['username'] ?>
->>>>>>> master
-=======
+
 <?php $loggedInUser = $_SESSION['username'] ?>
 >>>>>>> master
 <div class="bg-dark">
@@ -12,26 +9,19 @@
             <li><a href="<?= URL ?>User/home" class="text-light">Home</a></li>
             <li><a href="<?= URL ?>Location/index" class="text-light">Locations</a></li>
             <li><a href="<?= URL ?>Reservations/index" class="text-light">Reservations</a></li>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             <li><a href="<?= URL ?>User/inlog" class="text-light" id="logout">log out</a></li>
         </ul>
     </div>
 </div>
 
-=======
-=======
->>>>>>> master
             <li><a href="<?= URL ?>User/inlog" class="text-light">log out</a></li>
 
         </ul>
     </div>
 </div>
 <h3 class="text-dark float-right mr-5 mt-2">Hello <?= " ". $loggedInUser?></h3>
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
+
 <div class="container align-self-center mt-4">
     <h3>Make a reservation here</h3>
 <div class="container p-3 align-self-center">
