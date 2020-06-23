@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +13,14 @@
 </head>
 <body>
 
-
-
-
-
+<div class="bg-dark">
+    <div class="navbar">
+        <ul class="nav navbar-nav text-light">
+            <li><a href="<?= URL ?>Home/index" class="text-light">Home</a></li>
+            <li><a href="<?= URL ?>Location/index" class="text-light">Locations</a></li>
+            <li><a href="<?= URL ?>Reservations/index" class="text-light">Reservations</a></li>
+            <li><a href="<?= URL ?>User/index" class="text-light">Customers</a></li>
+        </ul>
+    </div>
+</div>
 </body>

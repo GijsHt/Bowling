@@ -1,10 +1,11 @@
 <?php
 
-require(ROOT . "model/HorsesModel.php");
+require(ROOT . "model/ReservationsModel.php");
 
-function index()
-{
+function index(){
 	render("reservations/index");
 }
 
-
+function viewCreateForm(){
+    render("reservations/create");
+}
