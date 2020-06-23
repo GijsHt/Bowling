@@ -15,7 +15,7 @@
 <h1>THIS IS LOCATION DETAILS</h1>
 
 <?php
-$result = getALlLocations();
+$result = getSingleLocation();
 
 
 
