@@ -2,14 +2,13 @@
 require(ROOT . "model/UserModel.php");
 
 
-
 function index(){
     $empty = '';
 
     if (isset($_POST['register'])) {
-        if (empty($_POST['username']) && empty($_POST['password']) && empty($_POST['email']) && empty($_POST['telefoonnummer']) && empty($_POST['adres'])) {
+        if (empty($_POST['username']) && empty($_POST['password']) && empty($_POST['email']) && empty($_POST['phone_number']) && empty($_POST['adres'])) {
             $empty = 'Geen veld ingevuld!';
-        } elseif (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email']) || empty($_POST['telefoonnummer']) || empty($_POST['adres'])){
+        } elseif (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email']) || empty($_POST['phone_number']) || empty($_POST['adres'])){
             $empty = 'Niet alles is ingevuld!';
 
 
@@ -17,10 +16,9 @@ function index(){
             $username = $_POST['username'];
             $password = hash('sha512', pw . $_POST['password']);
             $email = $_POST['email'];
-            $telefoonnummer = $_POST['telefoonnummer'];
+            $phone_number = $_POST['phone_number'];
             $adres = $_POST['adres'];
-            $admin = $_POST['admin'];
-            registerUser($username, $password, $email, $telefoonnummer, $adres, $admin);
+            registerUser($username, $password, $email, $phone_number, $adres);
         }
     }
 
@@ -28,6 +26,7 @@ function index(){
         'empty' => $empty,
     ));
 }
+
 function inlog(){
     if (isset($_POST['inlog'])) {
         if (empty($_POST['username']) && empty($_POST['password'])){
@@ -50,6 +49,10 @@ function inlog(){
     }
     render("user/inlog");
 }
-    
+
+function home(){
+    render("user/home");
+}
+
     
     

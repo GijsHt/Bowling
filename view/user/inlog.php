@@ -1,4 +1,5 @@
 
+
     <form class='form jumbotron' method="POST" action="<?= URL ?>user/inlog">
             <div class="form-group col">
                 <label>Gebruikersnaam</label>
@@ -22,4 +23,6 @@
         </form>
 
 <body>
+
+
 

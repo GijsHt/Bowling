@@ -7,7 +7,7 @@
             </div>
 
             <div class="form-group col">
-                <label>E-mail</label>
+                <label>Gmail</label>
                 <input class="form-control" type="email" name="email" placeholder="voorbeeld@email.nl">
             </div>
 
@@ -18,7 +18,7 @@
 
             <div class="form-group col">
                 <label>Telefoonnummer</label>
-                <input class="form-control" type="text" name="telefoonnummer" placeholder="Telefoonnummer" />
+                <input class="form-control" type="text" name="phone_number" placeholder="Telefoonnummer" />
             </div>
 
             <div class="form-group col">
@@ -36,7 +36,6 @@
                     echo "<p class='text-danger'>$empty</p>";
                 } ?>
             </div>
-            <input type="hidden" value="0" name="admin">
         </form>
 
 <body>

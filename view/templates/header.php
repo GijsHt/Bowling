@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Studenten app</title>
+	<title>SchoolProject</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -13,14 +13,4 @@
 </head>
 <body>
 
-<div class="bg-dark">
-    <div class="navbar">
-        <ul class="nav navbar-nav text-light">
-            <li><a href="<?= URL ?>Home/index" class="text-light">Home</a></li>
-            <li><a href="<?= URL ?>Location/index" class="text-light">Locations</a></li>
-            <li><a href="<?= URL ?>Reservations/index" class="text-light">Reservations</a></li>
-            <li><a href="<?= URL ?>User/index" class="text-light">Customers</a></li>
-        </ul>
-    </div>
-</div>
 </body>
