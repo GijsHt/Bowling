@@ -11,7 +11,7 @@ foreach($result as $location){ ?>
     <img src="<?=$location['image'] ?>"></img>
 
 
-    <a href="<?= URL ?>Location/viewDetails?id=<?= $location['location_id']?>" class="btn btn-primary">Meer details</a>
+    <a href="locationDetails.php?id=<?= $location['location_id']?>" class="btn btn-primary">Meer details</a>
 
 <?php } ?>
 

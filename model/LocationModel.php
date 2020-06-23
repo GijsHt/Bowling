@@ -10,14 +10,12 @@ function getAllLocations(){
 }
 
 function getSingleLocation(){
+    $id = $_GET['id'];
     $conn = openDatabaseConnection();
-    $stmt = $conn->prepare("SELECT * FROM locations location_id='$id'");
-    $stmt->execute();
+    $stmt = $conn->prepare("SELECT * FROM locations WHERE location_id=:id");
+    $stmt->execute(array(':id'=>$id));
     return $result = $stmt->fetchAll();
     $conn = null;
-
-
-
 }
 
 

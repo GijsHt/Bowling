@@ -12,11 +12,9 @@
 	<link rel="stylesheet" href="<?= URL ?>css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand navbar-light bg-dark sticky-top">
 
 
-    <div class="collapse navbar-collapse">
-    <a class="navbar-brand"><img class="img-fluid img-thumbnail" style="width:100px;" src=""/></a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-           
+
+
+
+</body>
