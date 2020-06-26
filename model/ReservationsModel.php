@@ -45,11 +45,11 @@ function getReservations($username){
     return $query->fetchAll();
 }
 
-function getReservedCities(){
+function getReservedCities($data){
     $db = openDatabaseConnection();
-    $sql = "SELECT * FROM locations INNER JOIN reservations on locations.location_id = reservations.location_id";
+    $sql = "SELECT * FROM locations INNER JOIN reservations on locations.location_id = reservations.location_id where username=:username";
     $query = $db->prepare($sql);
-    $query->execute();
+    $query->execute(array(":username" => $data));
     $db = null;
     return $query->fetchAll();
 }
