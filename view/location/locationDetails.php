@@ -27,26 +27,36 @@ foreach($result as $location){ ?>
     <div class="location-details-width">
         <div class="row container-fluid details-row">
             <div class="col-7">
-                <h3> Locatie:<?=$location['city_name'] ?> </h3>
-                <h3> Telefoon nummer:<?=$location['phone_number'] ?> </h3>
-                <h3> Postcode:<?=$location['zipcode'] ?> </h3>
-
+                    <div class="row container-fluid details-row">
+                        <div class="col-5">
+                            <h3> Locatie:</h3>
+                            <h3> Telefoon nummer:</h3>
+                            <h3> Postcode:</h3>
+                        </div> 
+                        <div class="col-4">
+                            <h3><?=$location['city_name'] ?> </h3>
+                            <h3><?=$location['phone_number'] ?> </h3>
+                            <h3><?=$location['zipcode'] ?> </h3>
+                        </div> 
+                    </div>
 
                     <div class="row container-fluid details-row">
-                        <div class="col-4">
+                        <div class="col-5">
                             <h3> Openingstijden:</h3>
                         </div> 
-
                         <div class="col-3">
                             <h3 class="">Maandag: Dinsdag: Woensdag: Donderdag: Vrijdag: <br> Zaterdag: <br> Zondag:</h3>
                         </div>
-
                         <div class="col-3">
                             <h3 class=""><?=$location['opening_times']?></h3>
                         </div>
-
                     </div>
 
+                    <div class="">
+                        <a href="<?= URL ?>Location/deleteLocation?id=<?= $location['location_id']?>" class="btn btn-danger w-50">Verwijder</a>
+                        <a href="<?= URL ?>Location/updateLocation?id=<?= $location['location_id']?>" class="btn btn-warning w-50">Update</a>
+
+                    </div>
 
 
 
