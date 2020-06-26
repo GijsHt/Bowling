@@ -7,24 +7,20 @@
             <li><a href="<?= URL ?>Location/index" class="text-light">Locations</a></li>
             <li><a href="<?= URL ?>Reservations/index" class="text-light">Reservations</a></li>
             <li><a href="<?= URL ?>User/inlog" class="text-light" id="logout">log out</a></li>
-            
-<h3 class="text-dark float-right mr-5 mt-2">Hello <?= " ". $loggedInUser?></h3>
         </ul>
     </div>
 </div>
 
-            <li><a href="<?= URL ?>User/inlog" class="text-light">log out</a></li>
 
-        </ul>
-    </div>
-</div>
+<h3 class="text-light float-right mr-5 mt-2 helloUser">Hello <?= " ". $loggedInUser?></h3>
+
 <?php
 $result = getALlLocations();
 ?>
 
         <?php
         foreach($result as $location){ ?>
-        <div class="location-index-width">
+        <div class="location-index-width mt-5">
             <div class="card card-border">
                 <img class="card-img-top location-image" src="<?= URL ?>img/<?=$location['image'] ?>"></img>
                 <div class="card body">

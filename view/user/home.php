@@ -12,10 +12,10 @@
 
 
 
-<h3 class="text-dark float-right mr-5 mt-2">Hello <?= " ". $loggedInUser?></h3>
+<h3 class="text-light float-right mr-5 mt-2 helloUser">Hello <?= " ". $loggedInUser?></h3>
 <div class="mb-5 mt-2">
 
-<img src="<?= URL ?>img/header.jpg" id="header" height="400px" width="100%">
+<img src="<?= URL ?>img/header.jpg" id="header" height="400px" width="100%" alt="#">
         <h1 id="title">BGR Bowling</h1>
 
 
