@@ -1,5 +1,5 @@
 
-<?php $loggedInUser = $_SESSION['username'] ?>
+<?php $loggedInUser = $_SESSION['username']; ?>
 
 
 <div class="bg-dark">
@@ -16,15 +16,15 @@
 
 
 <h3 class="text-light float-right mr-5 mt-2 helloUser">Hello <?= " ". $loggedInUser?></h3>
-
+<a href="<?= URL ?>Reservations/index" class="float-right mr-5">Go back <-</a>
 <div class="container align-self-center mt-4 card">
-    <h3>Make a reservation here</h3>
+    <h3>Maak een nieuwe reservering hier</h3>
 <div class="container p-3 align-self-center">
     <form method="post" action="<?= URL ?>Reservations/saveCreateData">
         <input type="hidden" value="<?=$_SESSION["username"]?>" name="username">
 
         <div class="form-group">
-            <label for="location">Which location are you planning on visiting?</label>
+            <label for="location">Kies een locatie</label>
             <select name="location" class="custom-select" required>
                     <? $locations = getCitiesName();
                     foreach ($locations as $location){?>
@@ -34,12 +34,12 @@
         </div>
 
         <div class="form-group">
-            <label for="time">When do you wish to start?</label>
+            <label for="time">Kies de begintijd</label>
             <input type="time" class="form-control" name="beginTime" required>
         </div>
 
         <div class="form-group">
-            <label for="endtime">When do you wish to stop?</label>
+            <label for="endtime">kies de eindtijd</label>
             <input type="time" class="form-control" name="endTime">
         </div>
         <input type="hidden" value=" " name="price">

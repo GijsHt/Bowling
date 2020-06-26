@@ -1,5 +1,5 @@
 <?php $loggedInUser = $_SESSION['username'];
-$reservations = getReservations($loggedInUser);
+
 $cities = getReservedCities($loggedInUser);
 ?>
 <div class="bg-dark">
@@ -14,15 +14,15 @@ $cities = getReservedCities($loggedInUser);
 </div>
     <h3 class="text-light float-right mr-5 mt-2 helloUser" >Hello <?= " ". $loggedInUser?></h3>
 
-<h1>Reservations you made</h1>
+<h1>Reserveringen die u heeft gemaakt</h1>
 
 <div class="container mt-5">
     <table border="1" class="table table-striped table-dark">
         <tr>
-            <th>Location</th>
-            <th>Start Time</th>
-            <th>End Time</th>
-            <th>Price</th>
+            <th>Locaties</th>
+            <th>Begintijd</th>
+            <th>Eindtijd</th>
+            <th>Prijs</th>
         </tr>
         <? foreach ($cities as $city){
             $eindtijd = $city["end_time"];
@@ -39,7 +39,7 @@ $cities = getReservedCities($loggedInUser);
             </tr>
         <?}?>
     </table>
-    <small class="float-right">Make a new reservation <a href="<?= URL ?>Reservations/viewCreateForm">here!</a></small>
+    <small class="float-right">Maak een nieuwe reservering <a href="<?= URL ?>Reservations/viewCreateForm">hier!</a></small>
 </div>
 
 

@@ -36,7 +36,7 @@ function getUserId($data){
 
 }
 
-function getReservations($username){
+function getReservedInfo($username){
     $db = openDatabaseConnection();
     $sql = "SELECT * FROM reservations where username=:username";
     $query = $db->prepare($sql);
@@ -45,11 +45,11 @@ function getReservations($username){
     return $query->fetchAll();
 }
 
-function getReservedCities($data){
+function getReservedCities(){
     $db = openDatabaseConnection();
-    $sql = "SELECT * FROM locations INNER JOIN reservations on locations.location_id = reservations.location_id where username=:username";
+    $sql = "SELECT * FROM locations INNER JOIN reservations on locations.location_id = reservations.location_id";
     $query = $db->prepare($sql);
-    $query->execute(array(":username" => $data));
+    $query->execute();
     $db = null;
     return $query->fetchAll();
 }
