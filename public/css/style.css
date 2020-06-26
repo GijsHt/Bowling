@@ -10,7 +10,11 @@
     color: white;
 }
 
-
+.helloUser{
+    position: absolute;
+    right: 105px;
+    top: 50px;
+}
 
 .details-image{
     border: 3px solid red;
@@ -18,8 +22,8 @@
     padding:0;
 }
 .details-row{
-    padding-left: 0px;
-    padding-right:0px;
+    padding-left: 0;
+    padding-right:0;
 }
 .location-index-width{
     width:1000px;
@@ -27,7 +31,7 @@
 }
 .card-border{
     border:3px solid black;
-    background-color: ;
+
     margin-bottom: 110px;
 }
 .location-image{
