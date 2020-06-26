@@ -61,9 +61,25 @@ $query->execute(array(":username" => $data[0],":locationId" => $data[1],":beginT
 $db = null;
 render("reservations/index");
 }
-
+function update($data){
+    sanitize($data);
+    $db = openDatabaseConnection();
+    $query = $db->prepare("UPDATE reservations SET username=:username, location_id=:location, begin_time=:begin_time, end_time=:end_time WHERE reservation_id=:id");
+    $query->execute(array(":username" => $data[0],":location" => $data[1],":begin_time" => $data[2],":end_time" => $data[3], ":id" => $data[4]));
+    $db = null;
+    render("reservations/index");
+}
+function delete($id){
+    $db = openDatabaseConnection();
+    $query = $db->prepare("DELETE FROM reservations where reservation_id=:id");
+    $query->execute(array(":id" => $id));
+    $db= null;
+    render('reservations/index');
+}
 
 function sanitize($data){
-
+    $data = array_map('trim', $data);
+    $data = array_map('htmlspecialchars', $data);
+    $data = array_map('stripcslashes', $data);
     return $data;
 }
