@@ -12,7 +12,7 @@ $cities = getReservedCities();
         </ul>
     </div>
 </div>
-    <h3 class="text-light float-right mr-5 mt-2" id="helloUser">Hello <?= " ". $loggedInUser?></h3>
+    <h3 class="text-light float-right mr-5 mt-2 helloUser" >Hello <?= " ". $loggedInUser?></h3>
 
 <h1>Reservations you made</h1>
 
