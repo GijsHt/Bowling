@@ -9,3 +9,10 @@
     left: 600px;
     color: white;
 }
+
+#helloUser {
+    position: absolute;
+    right: 105px;
+    color: lightgoldenrodyellow;
+    top: 50px;
+}
