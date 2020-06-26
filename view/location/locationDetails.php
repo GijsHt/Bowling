@@ -26,15 +26,39 @@ $result = getSingleLocation();
 
 foreach($result as $location){ ?>
 
-    <h3> <?=$location['name'] ?> </h3>
-    <h3> <?=$location['city_name'] ?> </h3>
-    <h3> <?=$location['phone_number'] ?> </h3>
-    <img src="<?=$location['image'] ?>"></img>
+    <div class="row container-fluid details-row">
+        <div class="col-7">
+            <h3 > <?=$location['name'] ?> </h3>
+            <h3> <?=$location['city_name'] ?> </h3>
+            <h3> <?=$location['phone_number'] ?> </h3>
 
+
+                <div class="row container-fluid details-row">
+                    <div class="col-3">
+                        <h3 class="">Maandag: Dinsdag: Woensdag: Donderdag: Vrijdag: <br> Zaterdag: <br> Zondag:</h3>
+                    </div>
+                    <div class="col-3">
+                        <h3 class=""><?=$location['opening_times']?></h3>
+                    </div>
+
+                </div>
+
+
+
+
+        </div>
+        <img class="col-5 details-image" src="<?= URL ?>img/<?=$location['image'] ?>"></img>
+    </div>
 
 
 
 <?php } ?>
+
+
+
+
+
+
 
 
 

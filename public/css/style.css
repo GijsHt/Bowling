@@ -9,3 +9,20 @@
     left: 600px;
     color: white;
 }
+.details-image{
+    border: 3px solid red;
+    width:100%;
+    padding:0;
+}
+.details-row{
+    padding-left: 0px;
+    padding-right:0px;
+}
+.location-index-width{
+    width:1000px;
+    margin:0 auto;
+}
+.card-border{
+    border:3px solid yellow;
+    background-color: ;
+}
