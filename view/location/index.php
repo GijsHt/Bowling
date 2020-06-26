@@ -1,6 +1,4 @@
-
 <?php $loggedInUser = $_SESSION['username'] ?>
-
 <?php $loggedInUser = $_SESSION['username'] ?>
 <div class="bg-dark">
     <div class="navbar">
@@ -28,10 +26,9 @@ $result = getALlLocations();
         foreach($result as $location){ ?>
         <div class="location-index-width">
             <div class="card card-border">
-                <img class="card-img-top" style="height:400px; width:100%" src="<?= URL ?>img/<?=$location['image'] ?>"></img>
+                <img class="card-img-top location-image" src="<?= URL ?>img/<?=$location['image'] ?>"></img>
                 <div class="card body">
-                    <h3 class="card-title"> <?=$location['name'] ?> </h3>
-                    <h3 class="card-text"> <?=$location['city_name'] ?> </h3>
+                    <h3 class="card-text">Locatie: <?=$location['city_name'] ?> </h3>
                     <h3 class="card-text"> <?=$location['phone_number'] ?> </h3>
                     <a href="<?= URL ?>Location/viewDetails?id=<?= $location['location_id']?>" class="btn btn-primary card-text w-25">Meer details</a>
                 </div>

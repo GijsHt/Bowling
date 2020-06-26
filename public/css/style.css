@@ -9,6 +9,9 @@
     left: 600px;
     color: white;
 }
+
+
+
 .details-image{
     border: 3px solid red;
     width:100%;
@@ -23,6 +26,16 @@
     margin:0 auto;
 }
 .card-border{
-    border:3px solid yellow;
+    border:3px solid black;
     background-color: ;
+    margin-bottom: 110px;
+}
+.location-image{
+    height:600px;
+    width: 100%;
+    border-bottom: 3px solid black;
+}
+.location-details-width{
+    width:1400px;
+    margin:0 auto;
 }
