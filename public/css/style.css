@@ -16,6 +16,43 @@
     top: 50px;
 }
 
+
+
+.location-index-width{
+    width: 1500px;
+    margin: 0 auto;
+}
+.card-border{
+    border:3px solid black;
+    margin-bottom: 50px;
+}
+.location-image{
+    height:200px;
+    width: 100%;
+    border-bottom: 3px solid black;
+}
+
+
+
+.location-left{
+
+}
+.location-center{
+    
+}
+.location-right{
+}
+.card-size{
+    width: 400px;
+}
+
+
+
+
+.location-details-width{
+    width:1400px;
+    margin:0 auto;
+}
 .details-image{
     border: 3px solid red;
     width:100%;
@@ -25,21 +62,5 @@
     padding-left: 0;
     padding-right:0;
 }
-.location-index-width{
-    width:1000px;
-    margin:0 auto;
-}
-.card-border{
-    border:3px solid black;
 
-    margin-bottom: 110px;
-}
-.location-image{
-    height:600px;
-    width: 100%;
-    border-bottom: 3px solid black;
-}
-.location-details-width{
-    width:1400px;
-    margin:0 auto;
-}
+

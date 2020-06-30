@@ -26,6 +26,7 @@ function deleteById(){
     $stmt->bindParam(":id", $id);
 
     $stmt->execute(array(':id'=>$id));
+    $conn = null;
 }
 
 
