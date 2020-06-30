@@ -2,19 +2,21 @@
 
 $cities = getReservedCities();
 ?>
-<div class="bg-dark">
-    <div class="navbar">
-        <ul class="nav navbar-nav text-light">
-            <li><a href="<?= URL ?>User/home" class="text-light">Home</a></li>
-            <li><a href="<?= URL ?>Location/index" class="text-light">Locations</a></li>
-            <li><a href="<?= URL ?>Reservations/index" class="text-light">Reservations</a></li>
-            <li><a href="<?= URL ?>User/inlog" class="text-light" id="logout">log out</a></li>
-        </ul>
-    </div>
-</div>
-    <h3 class="text-light float-right mr-5 mt-2 helloUser" >Hello <?= " ". $loggedInUser?></h3>
 
-<h1>Reserveringen die u heeft gemaakt</h1>
+    <div class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-danger ">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a href="<?= URL ?>User/home" class="text-light nav-item nav-link">Home</a>
+                <a href="<?= URL ?>Location/index" class="text-light nav-item nav-link">Locations</a>
+                <a href="<?= URL ?>Reservations/index" class="text-light nav-item nav-link">Reservations</a>
+             <a href="<?= URL ?>User/inlog" class="text-light nav-item nav-link float-right" id="logout nav-item nav-link">log out</a>
+            </div>
+        </div>
+    </nav>
+    </div>
+    <a class="text-light float-right mr-5 mt-2 helloUser" >Hello <?= " ". $loggedInUser?></a>
+<h3 class="mt-3 ml-5">Reserveringen die u heeft gemaakt</h3>
 
 <div class="container mt-5">
     <table border="1" class="table table-striped table-dark">
@@ -39,7 +41,7 @@ $cities = getReservedCities();
             </tr>
         <?}?>
     </table>
-    <small class="float-right">Maak een nieuwe reservering <a href="<?= URL ?>Reservations/viewCreateForm">hier!</a></small>
+    <h6 class="float-right">Maak een nieuwe reservering <a href="<?= URL ?>Reservations/viewCreateForm">hier!</a></h6>
 </div>
 
 

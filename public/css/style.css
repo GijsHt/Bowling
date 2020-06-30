@@ -10,22 +10,13 @@
     color: white;
 }
 
-.helloUser{
+.helloUser {
     position: absolute;
-    right: 105px;
-    top: 50px;
+    right: 100px;
+    top: 9px;
 }
 
 
-
-.location-index-width{
-    width: 1500px;
-    margin: 0 auto;
-}
-.card-border{
-    border:3px solid black;
-    margin-bottom: 50px;
-}
 .location-image{
     height:200px;
     width: 100%;
@@ -64,3 +55,6 @@
 }
 
 
+div ul li a {
+    display: inline-block;
+}
