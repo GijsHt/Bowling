@@ -1,6 +1,7 @@
 
 <?php $loggedInUser = $_SESSION['username']; ?>
 
+<?php $loggedInUser = $_SESSION['username'] ?>
 
 <div class="bg-dark">
     <div class="navbar">

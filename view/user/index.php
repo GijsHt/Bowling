@@ -7,7 +7,7 @@
             </div>
 
             <div class="form-group col">
-                <label>Gmail</label>
+                <label>E-mail</label>
                 <input class="form-control" type="email" name="email" placeholder="voorbeeld@email.nl">
             </div>
 
@@ -29,7 +29,7 @@
             <div class="form-group col">
                 <input class="btn btn-primary" type="submit" name="register" value="Registreer" />
                 <small class="form-text text-muted">Uw info is altijd prive.</small>
-                <p align="center"><a href="<?= URL ?>user/inlog">Login</a></p>
+                <p allign="center"><a href="<?= URL ?>user/inlog">Login</a></p>
                 <?php if(empty($empty)){
                     echo "";
                 } else{
@@ -38,5 +38,5 @@
             </div>
         </form>
 
-<body>
+
 

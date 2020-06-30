@@ -1,4 +1,6 @@
-<?php $ids= getUsers();
+<?php 
+
+$ids= getUsers();
 foreach ($ids as $id)?>
 
     <form class='form jumbotron' method="POST" action="<?= URL ?>user/inlog?id=<?=$id["user_id"]?>">

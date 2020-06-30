@@ -1,4 +1,5 @@
 <?php 
+
 require(ROOT . "model/UserModel.php");
 
 
@@ -10,9 +11,17 @@ function index(){
             $empty = 'Geen veld ingevuld!';
         } elseif (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email']) || empty($_POST['phone_number']) || empty($_POST['adres'])){
             $empty = 'Niet alles is ingevuld!';
+        } 
 
-
-        } else {
+        $dbnames = getUsers();
+        $doContinue = true;
+        foreach($dbnames as $dbnaam){
+            if($dbnaam['username'] == $_POST['username']){
+                $doContinue = false;
+                $empty = 'Username Bestaat al!';
+            }
+        }
+        if($doContinue){
             $username = $_POST['username'];
             $password = hash('sha512', pw . $_POST['password']);
             $email = $_POST['email'];
@@ -26,6 +35,7 @@ function index(){
         'empty' => $empty,
     ));
 }
+
 
 function inlog(){
     if (isset($_POST['inlog'])) {

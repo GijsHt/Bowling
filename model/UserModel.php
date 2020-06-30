@@ -40,9 +40,12 @@ function loginUser($username, $password){
 
 function getUsers(){
     $db = openDatabaseConnection();
-    $sql = "SELECT * FROM users";
-    $query = $db->prepare($sql);
-    $query->execute();
-    $db = null;
-    return $query->fetchAll();
+
+	$sql = "SELECT * FROM users";
+	$query = $db->prepare($sql);
+	$query->execute();
+
+	$db = null;
+
+	return $query->fetchAll();
 }
