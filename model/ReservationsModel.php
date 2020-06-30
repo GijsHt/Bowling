@@ -59,7 +59,7 @@ $db = openDatabaseConnection();
 $query = $db->prepare("INSERT INTO reservations (username, location_id, begin_time, end_time) values (:username, :locationId, :beginTime, :endTime)");
 $query->execute(array(":username" => $data[0],":locationId" => $data[1],":beginTime" => $data[2],":endTime" => $data[3]));
 $db = null;
-render("reservations/index");
+    header('Location: ' . URL . 'reservations/index');
 }
 function update($data){
     sanitize($data);
@@ -67,7 +67,7 @@ function update($data){
     $query = $db->prepare("UPDATE reservations SET username=:username, location_id=:location, begin_time=:begin_time, end_time=:end_time WHERE reservation_id=:id");
     $query->execute(array(":username" => $data[0],":location" => $data[1],":begin_time" => $data[2],":end_time" => $data[3], ":id" => $data[4]));
     $db = null;
-    render("reservations/index");
+    header('Location: ' . URL . 'reservations/index');
 }
 function delete($id){
     $db = openDatabaseConnection();
@@ -75,6 +75,12 @@ function delete($id){
     $query->execute(array(":id" => $id));
     $db= null;
     render('reservations/index');
+}
+
+function checkEmptyField($name){
+    if (isset($_POST[$name]) && empty($_POST[$name])) {
+        echo "This field can't be empty";
+    }
 }
 
 function sanitize($data){

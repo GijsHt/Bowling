@@ -10,6 +10,7 @@ function viewCreateForm(){
     render("reservations/create");
 }
 function viewUpdateForm(){
+    $id = $_POST["id"];
     render("reservations/update");
 }
 function saveCreateData(){

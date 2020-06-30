@@ -1,6 +1,6 @@
 <?php $loggedInUser = $_SESSION['username'];
 
-$cities = getReservedCities($loggedInUser);
+$cities = getReservedCities();
 ?>
 <div class="bg-dark">
     <div class="navbar">
