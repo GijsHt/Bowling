@@ -24,28 +24,15 @@
 }
 
 
-/*
-.location-left{
-    display: flex;
-    justify-content: space-evenly;
-}
-.location-center{
-    display: flex;
-    justify-content: space-evenly;
-}
-.location-right{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-*/
 
 .disp {
     display: flex;
   justify-content: space-evenly;
   }
 
-
+#opening{
+    width: 800px;
+}
 
 .card-size{
     width: 400px;

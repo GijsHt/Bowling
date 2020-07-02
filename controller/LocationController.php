@@ -12,3 +12,11 @@ function viewDetails(){
 function delete(){
 	render("location/deleteLocation");
 }
+
+function updateLocation(){
+	render("location/updateLocation");
+}
+
+function updateLocation2(){
+	render("location/updateLocation2");
+}

@@ -61,9 +61,8 @@ foreach($result as $location){ ?>
                     </div>
 
                     <div class="<?= $show_class?>">
-                        <a href="<?= URL ?>Location/deleteLocation?id=<?=$location['location_id']?>" class="btn btn-danger w-50 ">Verwijder</a>
-                        <a href="<?= URL ?>Location/updateLocation?id=<?=$location['location_id']?>" class="btn btn-warning w-50">Update</a>
-
+                        <a href="<?= URL ?>Location/deleteLocation?id=<?= $location['id']?>" class="btn btn-danger w-50 ">Verwijder</a>
+                        <a href="<?= URL ?>Location/updateLocation?id=<?= $location['id']?>" class="btn btn-warning w-50">Update</a>
                         
 
                     </div>
