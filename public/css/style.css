@@ -24,22 +24,44 @@
 }
 
 
-
+/*
 .location-left{
-
+    display: flex;
+    justify-content: space-evenly;
 }
 .location-center{
-    
+    display: flex;
+    justify-content: space-evenly;
 }
 .location-right{
+    display: flex;
+    justify-content: space-evenly;
 }
+
+*/
+
+.disp {
+    display: flex;
+  justify-content: space-evenly;
+  }
+
+
+
 .card-size{
     width: 400px;
 }
 
 
 
+.location-index-width{
+    width:1400px;
+    margin:0 auto;
+}
 
+.card-border{
+    border: 3px solid black;
+    margin-bottom: 50px;
+}
 .location-details-width{
     width:1400px;
     margin:0 auto;
@@ -57,4 +79,14 @@
 
 div ul li a {
     display: inline-block;
+}
+
+
+
+.admin-invisible{
+    display: none;
+}
+
+.admin-visible{
+    display: initial;
 }

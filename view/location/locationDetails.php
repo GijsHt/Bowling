@@ -1,4 +1,15 @@
-<?php $loggedInUser = $_SESSION['username'] ?>
+<?php $loggedInUser = $_SESSION['username'];
+        $admin = 'admin';
+        $show_class = "";
+
+        if($admin == 'admin'){
+            $show_class = "admin-visible";
+        }
+        else{
+            $show_class = "admin-invisible";
+        }
+
+?>
 <div class="bg-dark">
     <nav class="navbar navbar-expand-lg navbar-danger ">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -19,8 +30,6 @@
 
 <?php
 $result = getSingleLocation();
-
-
 
 foreach($result as $location){ ?>
     <div class="location-details-width">
@@ -51,8 +60,8 @@ foreach($result as $location){ ?>
                         </div>
                     </div>
 
-                    <div class="">
-                        <a href="<?= URL ?>Location/deleteLocation?id=<?=$location['location_id']?>" class="btn btn-danger w-50">Verwijder</a>
+                    <div class="<?= $show_class?>">
+                        <a href="<?= URL ?>Location/deleteLocation?id=<?=$location['location_id']?>" class="btn btn-danger w-50 ">Verwijder</a>
                         <a href="<?= URL ?>Location/updateLocation?id=<?=$location['location_id']?>" class="btn btn-warning w-50">Update</a>
 
                         
