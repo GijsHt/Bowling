@@ -12,7 +12,7 @@ function getAllLocations(){
 function getSingleLocation(){
     $conn = openDatabaseConnection();
     $id = $_GET['id'];
-    $stmt = $conn->prepare("SELECT * FROM locations WHERE id=:id");
+    $stmt = $conn->prepare("SELECT * FROM locations WHERE location_id=:id");
     $stmt->execute(array(':id'=>$id));
     return $result = $stmt->fetchAll();
     $conn = null;
@@ -22,7 +22,7 @@ function deleteById(){
     $conn = openDatabaseConnection();
     $id = $_GET['id'];
 
-    $stmt = $conn->prepare("DELETE FROM locations WHERE id=:id");
+    $stmt = $conn->prepare("DELETE FROM locations WHERE location_id=:id");
     $stmt->bindParam(":id", $id);
 
     $stmt->execute();
@@ -38,7 +38,7 @@ function updateLocationFunction(){
     $zipcode = $_POST['zipcode'];
     $phone_number = $_POST['phone_number'];
     $opening_times = $_POST['opening_times'];
-    $stmt = $conn->prepare("UPDATE locations SET city_name = :city_name, zipcode = :zipcode, phone_number = :phone_number, opening_times = :opening_times WHERE id = '$id'");
+    $stmt = $conn->prepare("UPDATE locations SET city_name = :city_name, zipcode = :zipcode, phone_number = :phone_number, opening_times = :opening_times WHERE location_id = '$id'");
     $stmt->bindParam(":city_name", $city_name);
     $stmt->bindParam(":zipcode", $zipcode);
     $stmt->bindParam(":phone_number", $phone_number);

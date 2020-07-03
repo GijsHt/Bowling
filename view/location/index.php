@@ -44,7 +44,7 @@ $i = 0;
                     <div class="card body">
                         <h3 class="card-text">Locatie: <?=$location['city_name'] ?> </h3>
                         <h3 class="card-text"> <?=$location['phone_number'] ?> </h3>
-                        <a href="<?= URL ?>Location/viewDetails?id=<?= $location['id']?>" class="btn btn-primary card-text w-100">Meer details</a>
+                        <a href="<?= URL ?>Location/viewDetails?id=<?= $location['location_id']?>" class="btn btn-primary card-text w-100">Meer details</a>
                     </div>
                 </div>
             </div>
