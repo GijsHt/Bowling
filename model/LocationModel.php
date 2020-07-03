@@ -18,15 +18,12 @@ function getSingleLocation(){
     $conn = null;
 }
 
-function deleteById(){
+function delete($id){
     $conn = openDatabaseConnection();
-    $id = $_GET['id'];
-
     $stmt = $conn->prepare("DELETE FROM locations WHERE location_id=:id");
     $stmt->bindParam(":id", $id);
-
     $stmt->execute();
-    $conn = null;
+    render("location/index");
 }
 
 function updateLocationFunction(){

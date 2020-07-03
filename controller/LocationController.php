@@ -9,12 +9,13 @@ function index(){
 function viewDetails(){
 	render("location/locationDetails");
 }
-function delete(){
-	render("location/deleteLocation");
+function deleteLocation(){
+    $id = $_GET["id"];
+    delete($id);
 }
 
 function updateLocation(){
-	render("location/updateLocation");
+	render("location/updatelocation");
 }
 
 function updateLocation2(){

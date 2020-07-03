@@ -17,21 +17,35 @@
     $id = $_GET['id'];
 ?>
 
-
-
-<form action="updateLocation2" method="post">
+<div class="container align-self-center mt-4 card">
+    <h3>Update deze locatie hier</h3>
+<div class="container p-3 align-self-center">
+<form action="updateLocation2" method="post" class="">
     <?php foreach($result as $old_data){ ?>
         <br>
-        <label for="city_name">Locatie</label><input type="text" name="city_name" id="city_name" value="<?=$old_data['city_name']?>"><br>
-        <label for="zipcode">postcode</label><input type="text" name="zipcode" id="zipcode" value="<?=$old_data['zipcode']?>"><br>
-        <label for="phone_number">telefoon nummer</label><input type="telefoon" name="phone_number" id="phone_number" value="<?=$old_data['phone_number']?>"><br>
-        <label for="opening_times">openings tijden</label><input type="text" name="opening_times" id="opening_times"  value="<?=$old_data['opening_times']?>"><br>
+    <div class="form-group">
+        <label for="city_name">Locatie</label>
+        <input type="text" class="form-control" name="city_name" id="city_name" value="<?=$old_data['city_name']?>"><br>
+    </div>
+    <div class="form-group">
+        <label for="zipcode">postcode</label>
+        <input type="text" class="form-control" name="zipcode" id="zipcode" value="<?=$old_data['zipcode']?>"><br>
+    </div>
+    <div class="form-group">
+        <label for="phone_number">telefoon nummer</label>
+        <input type="text" class="form-control" name="phone_number" id="phone_number" value="<?=$old_data['phone_number']?>"><br>
+    </div>
+    <div class="form-group">
+        <label for="opening_times">openings tijden</label>
+        <input type="text" class="form-control" name="opening_times" id="opening_times"  value="<?=$old_data['opening_times']?>"><br>
+    </div>
         <input type="number" name="id" value="<?= $id ?>" hidden>
         
 
-        <button name="submit" type='submit'>Wijzigen!</button>
-
-
+        <button name="submit" type='submit' class="btn btn-primary">Wijzigen!</button>
+</form>
+</div>
+</div>
     <?php } ?>
 
 
