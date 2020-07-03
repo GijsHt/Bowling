@@ -14,7 +14,7 @@ $cities = getReservedCities();
             </div>
         </div>
     </nav>
-    </div>
+</div>
     <a class="text-light float-right mr-5 mt-2 helloUser" >Hello <?= " ". $loggedInUser?></a>
 <h3 class="mt-3 ml-5">Reserveringen die u heeft gemaakt</h3>
 
@@ -37,7 +37,7 @@ $cities = getReservedCities();
                 <td><?= $city["begin_time"] ?></td>
                 <td><?= $city["end_time"] ?></td>
                 <td><?= $totaalkosten  ?></td>
-                <td><a href="<?= URL ?>Reservations/viewUpdateForm?id=<?=$city["reservation_id"]?>">Edit</a> &nbsp;&nbsp; <a href="<?= URL ?>Reservations/initiateDeleteForm?id=<?=$city["reservation_id"]?>" onclick="return confirm('Are you sure you want to delete this reservation?')">Delete</a></td>
+                <td><a href="<?= URL ?>Reservations/viewUpdateForm?id=<?=$city["reservation_id"]?>">Wijzigen</a> &nbsp;&nbsp; <a href="<?= URL ?>Reservations/initiateDeleteForm?id=<?=$city["reservation_id"]?>" onclick="return confirm('Are you sure you want to delete this reservation?')">Verwijderen</a></td>
             </tr>
         <?}?>
     </table>

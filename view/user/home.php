@@ -29,26 +29,6 @@
 
 
 
-<div class="row text-center ml-5">
-    <div class="col-lg-5 text-center my-auto">
-        <div class="card card-block">
-            <div class="card-body align-items-center  justify-content-center">
-                <b>Openingstijden<br>
-                Maandag: 15.00 - 23.00 uur<br>
-                Dinsdag: 15.00 - 23.00 uur<br>
-                Woensdag: 13.00 - 23.00 uur<br>
-                Donderdag: 15.00 - 23.00 uur<br>
-                Vrijdag: 15.00 - 01.00 uur<br>
-                Zaterdag: 13.00 - 01.00 uur<br>
-                    Zondag: 13.00 - 23.00 uur</b><br><br>
-
-                Tijdens de carnavalsvakantie, 24/02-28/02, zijn wij iedere dag vanaf 13.00 geopend en hanteren wij het vakantietarief.<br>
-
-                *Let op: openingstijden kunnen afwijken in rustigere periodes. Om teleurstelling te voorkomen kunt U telefonisch contact met ons opnemen.
-            </div>
-        </div>
-    </div>
-</div>
 
    
 
